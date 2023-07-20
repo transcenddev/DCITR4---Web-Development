@@ -1,0 +1,52 @@
+/* 
+Copy the codes on the attached text file (activity2.txt) and create an external stylesheet based on the following requirements:
+1. The page should have a background image that is not repeated and place at the center.
+ 
+2. The heading is centered, with background color (of your choice) in HEX format and font family (of your choice). It has a 2px dotted blue border. A 10px padding is added to the top and bottom and 15px for the right and left. The width of the box should be 250px. Margin at the bottom is 20px.
+ 
+3. The paragraph is justified, with background color (of your choice) in HSL format and italicized. It has a padding of 20px. Add 3px black border to the paragraph with different border styles (of your choice) on each side. The width of the content should be 500px.
+
+4.The <span> element is bold, italicized, and with different font color (of your choice) in RGB format). It has a margin of 2px and 5px for left and right, respectively
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/activity/áctivity-02/assets/images/istockphoto-1182278439-612x612.jpg) no-repeat center/cover;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.heading {
+  text-align: center;
+  background-color: #8848ff;
+  border: 2px dotted #0000FF;
+  width: 250px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  text-align: justify;
+  background-color: hsl(263, 100%, 63%);
+  font-style: italic;
+  width: 500px;
+  border: 3px solid #000;
+  padding: 20px;
+
+}
+
+span {
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  margin: 2px 5px;
+}
