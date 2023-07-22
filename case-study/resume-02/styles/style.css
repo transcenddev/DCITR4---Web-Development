@@ -132,6 +132,10 @@ a {
   color: var(--clr-primary);
 }
 
+.flex {
+  display: flex;
+}
+
 /* ====== left-top ===== */
 
 .left.card {
@@ -147,8 +151,8 @@ a {
 
 .profile-img__container {
   background: linear-gradient(to right, rgb(54, 54, 54), rgb(32, 32, 32));
-  min-width: 170px;
-  min-height: 170px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.329);
   display: flex;
@@ -157,8 +161,9 @@ a {
 }
 
 .profile__img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -186,7 +191,7 @@ a {
 .container {
   --padding: 2em;
   padding: var(--padding);
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -211,6 +216,14 @@ a {
   display: none;
   font-size: var(--fs-4);
 }
+
+.personal__data .flex {
+  /* font-size: var(--fs-2); */
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
 
 /* ====== About ======= */
 
@@ -431,6 +444,10 @@ a {
     display: flex;
   }
 
+  .container {
+    width: 70%;
+  }
+
   .profile__name {
     display: none;
   }
@@ -470,6 +487,7 @@ a {
 
   .right .personal__data .name {
     display: block;
+    margin-bottom: 0.5em;
   }
 
   .grid {
