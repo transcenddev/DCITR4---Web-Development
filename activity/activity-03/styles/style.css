@@ -1,93 +1,116 @@
-/* Create a Web page for Contact Tracing:  
-1) 11 rows and 6 columns.  
-2) The table header:  
- - #  
- - Lastname  
- - Firstname  
- - Sex (M/F)  
- - Age  
- - Contact #)  
-  
-3) Add zebra-stripes.  
-4) Add hover effect.  
-5) Use contextual classes. */
-
 :root {
-  --ff-primary: 'Inter', sans-serif;
-  --clr-primary: #36304a;
-  --clr-light: #fff;
-  --clr-dark: #111;
-  --clr-secondary: #f5f5f5;
+  --clr-light: #eee;
+  --clr-gradient: linear-gradient(to right, rgb(54, 54, 54), rgb(32, 32, 32));
 
-  --text-secondary: #999;
+  --ff-primary: 'Inter', sans-serif, system-ui;
+
+  --fs-1: 0.9rem;
+  --fs-2: 1rem;
+  --fs-3: 2rem;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  color-scheme: dark;
+}
+
 body {
-  min-height: 100vh;
+  color: var(--clr-light);
+  font-size: var(--fs-1);
   font-family: var(--ff-primary);
-  font-weight: 400;
-  color: var(--clr-dark);
-  display: grid;
-  place-items: center;
-  padding: 90px 0;
+  line-height: 1.5;
+  padding: 50px 0;
 }
 
-.contact-listing-form {
-  background: var(--clr-light);
-  color: var(--clr-dark);
-  border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  overflow-x: auto;
-  /* Enable horizontal scrolling on smaller screens */
-
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
+.wrapper {
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+  border-radius: 20px;
 }
-
-.contact-listing-form__heading,
-.contact-listing-form__sub-heading {
-  margin: 0.3em 0;
-}
-
-.contact-listing-form__sub-heading {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
 
 .table {
-  display: flex;
-}
-
-.table__head .table__row .table__header,
-.table__body .table__row {
-  /* background-color: var(--clr-primary) !important;
-  color: var(--clr-light); */
-  display: flex;
-  flex-direction: column;
-}
-
-.table__body .table__row .table__data {
-  color: red;
   width: 100%;
+  border-collapse: collapse;
+  background: var(--clr-gradient);
+  border-radius: 20px;
 }
 
+.title,
+.table__caption,
+.table__header,
+.table__data {
+  padding: 1rem;
+}
+
+.table__caption,
 .table__header {
-  padding: 1em 3em;
+  text-align: left;
+}
+
+.table__caption {
+  font-size: var(--fs-2);
+  font-weight: 500;
 }
 
 .table__data {
-  padding: 1em;
-  text-align: center;
-  color: var(--text-secondary);
-  width: 100%;
+  font-size: var(--fs-1);
+}
+
+.table__header {
+  background: hsla(0, 0%, 0%, 0.5);
+}
+
+.table__header:first-child {
+  border-top-left-radius: 20px;
+}
+
+.table__header:last-child {
+  border-top-right-radius: 20px;
+}
+
+.table__row {
+  transition-duration: .5s;
+}
+
+.table__row:nth-child(2n) {
+  background: hsl(0 0% 0% / 0.1);
+}
+
+.table__row:nth-child(1n):hover {
+  background: hsl(0 0% 0% / 0.2);
+}
+
+@media (max-width: 650px) {
+  .table__header {
+    display: none;
+  }
+
+  .table__data {
+    display: grid;
+    grid-template-columns: 15ch auto;
+    gap: 1rem;
+    padding: .5rem 1rem;
+  }
+
+  .table__data:first-child {
+    padding-top: 2rem;
+  }
+
+  .table__data:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .table__data::before {
+    content: attr(data-cell)":";
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
 }
