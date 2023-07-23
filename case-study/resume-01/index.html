@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Google Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <!-- favico -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="left">
+        <div class="profile__placeholder">
+          <div class="profile-img__container">
+            <div class="profile__background"></div>
+            <img
+              class="profile-img"
+              src="./assets/images/profile-picture.png"
+              alt="profile-picture"
+            />
+          </div>
+        </div>
+        <div class="profile-text__container">
+          <p class="profile-name">Reymar Mirante</p>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#profile" class="navbar__link navbar__link">Profile</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#skill" class="navbar__link navbar__link">Skills</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#education" class="navbar__link navbar__link"
+                >Education</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#certification" class="navbar__link navbar__link"
+                >Certification</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="right">
+        <!-- Personal Data -->
+        <section class="section personal-data" id="profile">
+          <p class="personal-data__name">
+            <strong>Reymar Victoriano Mirante</strong>
+          </p>
+          <p class="flex">
+            <span class="material-icons-sharp icon">calendar_month</span>
+            September 27, 2022
+          </p>
+          <p class="flex">
+            <span class="material-icons-sharp icon">location_on</span>
+            Cavite, Philippines
+          </p>
+          <p class="flex">
+            <span class="material-icons-sharp icon">call</span>
+            +63-9669779402
+          </p>
+          <p class="flex">
+            <span class="material-icons-sharp icon">email</span>
+            mirantereymar@gmail.com
+          </p>
+        </section>
+        <div class="divider"></div>
+        <!-- Resume Summary -->
+        <section class="section about" id="about">
+          <p class="about__text">
+            Detail-oriented student with a proven track record of over 2 years.
+            Proficient in a wide range of programming languages and
+            technologies, including HTML, CSS, JavaScript, MySQL, PHP, Java, and
+            Python. Demonstrated expertise in creating dynamic and responsive
+            websites, web applications, and databases.
+          </p>
+        </section>
+        <div class="divider"></div>
+        <!-- Skill -->
+        <section class="section skill" id="skill">
+          <h2 class="section__title">Skills</h2>
+          <div class="skill__container">
+            <h2 class="section__sub-header">Development Skills</h2>
+            <div class="grid__item">
+              <p class="">HTML</p>
+              <div class="progress-loader">
+                <div class="progress progress-html"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>CSS</p>
+              <div class="progress-loader">
+                <div class="progress progress-css"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>JS</p>
+              <div class="progress-loader">
+                <div class="progress progress-js"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>Bootstrap</p>
+              <div class="progress-loader">
+                <div class="progress progress-bootstrap"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>SQL</p>
+              <div class="progress-loader">
+                <div class="progress progress-sql"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>PHP</p>
+              <div class="progress-loader">
+                <div class="progress progress-php"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>Java</p>
+              <div class="progress-loader">
+                <div class="progress progress-java"></div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <p>Python</p>
+              <div class="progress-loader">
+                <div class="progress progress-python"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill__container">
+            <h2 class="section__sub-header">Other Skills</h2>
+            <div class="grid">
+              <div class="grid__item">
+                <p class="grid__item-text">Content Creation</p>
+                <div class="progress-loader">
+                  <div class="progress progress__content-creation"></div>
+                </div>
+              </div>
+              <div class="grid__item">
+                <p>Video Editing</p>
+                <div class="progress-loader">
+                  <div class="progress progress__video-editing"></div>
+                </div>
+              </div>
+              <div class="grid__item">
+                <p>Video Production</p>
+                <div class="progress-loader">
+                  <div class="progress progress__video-production"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <!-- Education -->
+        <section class="section education" id="education">
+          <h2 class="section__title">Education</h2>
+          <div class="section__text-body">
+            <p>B.S. in Computer Science</p>
+            <p>Cavite State University Campus</p>
+            <p>
+              Relevant Coursework: Python Programming, Web System and
+              Technologies, Introduction to Computing, Database Management
+              System, Objected-Oriented Programming.
+            </p>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <!-- Certification -->
+        <section class="section certification" id="certification">
+          <h2 class="section__title">Certifications</h2>
+          <div class="card">
+            <div class="card__details">
+              <p class="card__title">Basic Web Development Using Wordpress</p>
+              <p class="card__text-body">
+                Department of Information and Communications Technology - ICT
+                Literacy and Competency Development Bureau
+              </p>
+              <p class="card__text-bottom">January 10, 2023</p>
+            </div>
+            <button class="card__button">
+              <a
+                href="./assets/certifications/Basic Web Development Using WordPress.pdf"
+                download
+                >More info</a
+              >
+            </button>
+          </div>
+          <div class="card">
+            <div class="card__details">
+              <p class="card__title">Conquering Responsive Layouts</p>
+              <p class="card__text-body">Kevin Powell,CSS Evangelist</p>
+              <p class="card__text-bottom">November 02, 2022</p>
+            </div>
+            <button class="card__button">
+              <a
+                href="./assets/certifications/Conquering Responsive Layouts.pdf"
+                download
+                >More info</a
+              >
+            </button>
+          </div>
+          <div class="card">
+            <div class="card__details">
+              <p class="card__title">Programming for Beginners Using Python</p>
+              <p class="card__text-body">
+                Department of Information and Communications Technology through
+                the Modern Academics Convergence Hub (MACH)
+              </p>
+              <p class="card__text-bottom">December 07, 2021</p>
+            </div>
+            <button class="card__button">
+              <a
+                href="./assets/certifications/Programming for Beginners Using Python.pdf"
+                download
+                >More info</a
+              >
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
