@@ -1,0 +1,2 @@
+Create a login form that allows users to enter their username and password. 
+When the form is submitted, the script should check whether the username and password match those stored in a PHP array. If there is a match, the script should redirect the user to a welcome page. If there is no match, the script should display an error message.
